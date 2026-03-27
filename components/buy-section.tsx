@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { BookOpen, Smartphone, Star } from "lucide-react"
 
@@ -34,7 +33,7 @@ const retailers = [
   },
   {
     name: "BookLoop",
-    url: "https://www.bookloop.com.au/product/sammi-the-helicopter-dog-my-first-flight/",
+    url: "https://www.bookloop.com.au/sammi-the-helicopter-dog-my-first-flight-phil-carey-9780645417128/",
     primary: false,
     highlight: false,
     external: true,
@@ -107,14 +106,14 @@ export function BuySection() {
                       : ""
                   }`}
                 >
-                  <Link
+                  <a
                     href={retailer.url}
                     target={retailer.external ? "_blank" : "_self"}
                     rel={retailer.external ? "noopener noreferrer" : undefined}
                   >
                     {retailer.highlight && <Star className="w-4 h-4 mr-2 fill-current" />}
                     {retailer.highlight ? retailer.name : `Buy on ${retailer.name}`}
-                  </Link>
+                  </a>
                 </Button>
               ))}
             </div>

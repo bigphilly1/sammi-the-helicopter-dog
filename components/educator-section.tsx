@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { BookOpen, GraduationCap, Mail, FileText } from "lucide-react"
 
@@ -74,12 +73,12 @@ export function EducatorSection() {
               acquisition, or a school looking to book an author visit — we&apos;d love to hear from you.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <Link
+              <a
                 href="mailto:sammithehelicopterdog@gmail.com?subject=School%20Enquiry&body=Hi%20Phil%2C%20I%27d%20like%20to%20enquire%20about%20Sammi%20The%20Helicopter%20Dog%20for%20our%20school."
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Get in Touch
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

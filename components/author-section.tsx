@@ -10,7 +10,7 @@ export function AuthorSection() {
         <div className="max-w-2xl mx-auto text-center mb-16">
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl px-10 py-10 shadow-md border border-white/60">
             <p className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-foreground mb-3">
-              Dedicated to Robyn.
+              Dedicated to Robin.
             </p>
             <p className="text-xl text-muted-foreground italic">
               &ldquo;I wish I could have read it to you.&rdquo;
