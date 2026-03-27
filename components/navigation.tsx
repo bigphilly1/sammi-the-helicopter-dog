@@ -11,6 +11,7 @@ const navLinks = [
   { href: "#author", label: "Meet Phil" },
   { href: "#reviews", label: "Reviews" },
   { href: "#buy", label: "Get Your Copy" },
+  { href: "#educators", label: "Schools" },
 ]
 
 export function Navigation() {

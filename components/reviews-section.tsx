@@ -1,25 +1,7 @@
-import { Star } from "lucide-react"
+import { Star, ExternalLink } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
-const reviews = [
-  {
-    rating: 5,
-    text: "My kids absolutely loved this book! The illustrations are stunning and the story has such a wonderful message about being yourself.",
-    author: "Sarah M.",
-    source: "Amazon Review",
-  },
-  {
-    rating: 5,
-    text: "A beautiful story with a heartwarming message. We read it every night now - it's become our favourite bedtime story!",
-    author: "David L.",
-    source: "Amazon Review",
-  },
-  {
-    rating: 5,
-    text: "The artwork is breathtaking and the story teaches kids that being different is actually a superpower. Highly recommend!",
-    author: "Emma T.",
-    source: "Amazon Review",
-  },
-]
+const AMAZON_URL = "https://www.amazon.com.au/Sammi-Helicopter-Dog-First-Flight/dp/0645417122"
 
 export function ReviewsSection() {
   return (
@@ -35,31 +17,47 @@ export function ReviewsSection() {
             Loved by Families
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            5-star rated on Amazon. See what parents and kids are saying about Sammi&apos;s adventure.
+            Rated 5 stars on Amazon. Read what parents and children are saying about Sammi&apos;s adventure.
           </p>
         </div>
 
-        {/* Reviews Grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-sm border border-white/50 hover:shadow-md transition-shadow"
-            >
-              <div className="flex gap-1 mb-4">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                ))}
-              </div>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                &quot;{review.text}&quot;
-              </p>
-              <div className="border-t border-border pt-4">
-                <p className="font-semibold text-foreground">{review.author}</p>
-                <p className="text-sm text-muted-foreground">{review.source}</p>
-              </div>
+        {/* Amazon CTA */}
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-10 shadow-sm border border-white/50 text-center">
+            <div className="flex justify-center gap-1 mb-6">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-7 h-7 fill-amber-400 text-amber-400" />
+              ))}
             </div>
-          ))}
+            <p className="text-xl text-foreground font-medium mb-2 leading-relaxed max-w-xl mx-auto">
+              &ldquo;A beautiful story with a heartwarming message. The illustrations are absolutely stunning
+              and the message about being different is one every child needs to hear.&rdquo;
+            </p>
+            <p className="text-sm text-muted-foreground mb-8">
+              — Verified Amazon Review
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-amber-500 hover:bg-amber-600 text-white">
+                <a
+                  href={`${AMAZON_URL}#customerReviews`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Read All Reviews on Amazon
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <a
+                  href={`${AMAZON_URL}#customerReviews`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Leave Your Own Review
+                </a>
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

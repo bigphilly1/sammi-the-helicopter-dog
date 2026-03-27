@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Mail, CheckCircle } from "lucide-react"
+import { Mail, CheckCircle, Instagram } from "lucide-react"
 
 export function NewsletterSection() {
   const [email, setEmail] = useState("")
@@ -92,8 +92,8 @@ export function NewsletterSection() {
                 )}
               </div>
 
-              {/* Sammi Image */}
-              <div className="hidden md:flex justify-center">
+              {/* Sammi Image + Instagram CTA */}
+              <div className="hidden md:flex flex-col items-center gap-6">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/25%20and%2026-oOTSAFXCTk0StFeYfqFU7l2JFp3B9a.jpg"
                   alt="Sammi the helicopter dog"
@@ -101,6 +101,18 @@ export function NewsletterSection() {
                   height={280}
                   className="rounded-2xl"
                 />
+                <a
+                  href="https://instagram.com/sammithehelicopterdog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition-opacity"
+                >
+                  <Instagram className="w-4 h-4" />
+                  Follow Sammi on Instagram
+                </a>
+                <p className="text-xs text-muted-foreground text-center max-w-[200px]">
+                  Daily life with the real Sammi, behind-the-scenes of Book 2, and more.
+                </p>
               </div>
             </div>
           </div>

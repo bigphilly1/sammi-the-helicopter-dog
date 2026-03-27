@@ -104,7 +104,7 @@ export function FreeBookPopup() {
                 </div>
               </div>
               <DialogTitle className="font-[family-name:var(--font-display)] text-2xl font-bold text-foreground">
-                Win a Free Digital Copy!
+                Join Sammi&apos;s Adventure Club!
               </DialogTitle>
             </DialogHeader>
 
@@ -116,10 +116,10 @@ export function FreeBookPopup() {
                   </div>
                 </div>
                 <h3 className="font-semibold text-lg text-foreground mb-2">
-                  You&apos;re Entered!
+                  You&apos;re In!
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  {message || "We'll announce a winner every week. Good luck!"}
+                  {message || "You'll be the first to hear about giveaways, Book 2 news, and exclusive sneak peeks!"}
                 </p>
                 <Button
                   onClick={handleClose}
@@ -147,8 +147,8 @@ export function FreeBookPopup() {
                 </div>
 
                 <p className="text-center text-muted-foreground text-sm mb-4">
-                  Every week we give away a <strong>free digital copy</strong> of 
-                  &quot;Sammi The Helicopter Dog&quot; to one lucky subscriber!
+                  Get exclusive <strong>Book 2 sneak peeks</strong>, be the first to hear about
+                  giveaways, and receive special offers — straight to your inbox.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-3">
@@ -165,12 +165,12 @@ export function FreeBookPopup() {
                     disabled={isLoading}
                     className="w-full bg-primary hover:bg-primary/90"
                   >
-                    {isLoading ? "Entering..." : "Enter to Win"}
+                    {isLoading ? "Joining..." : "Join the Club"}
                   </Button>
                 </form>
 
                 <p className="text-center text-xs text-muted-foreground mt-3">
-                  Plus get updates on Book 2 and special offers!
+                  No spam. Unsubscribe any time.
                 </p>
 
                 <button

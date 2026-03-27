@@ -16,16 +16,21 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
-            <div className="inline-flex items-center gap-2 bg-secondary/50 rounded-full px-4 py-2 mb-6">
+            <a
+              href="https://www.amazon.com.au/Sammi-Helicopter-Dog-First-Flight/dp/0645417122#customerReviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-secondary/50 hover:bg-secondary/70 rounded-full px-4 py-2 mb-6 transition-colors"
+            >
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                 ))}
               </div>
               <span className="text-sm font-medium text-secondary-foreground">
-                5-Star Reviews on Amazon
+                5-Star Reviews on Amazon ↗
               </span>
-            </div>
+            </a>
 
             <h1 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-balance">
               Meet Sammi,

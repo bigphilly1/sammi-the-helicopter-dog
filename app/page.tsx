@@ -4,6 +4,7 @@ import { PreviewSection } from "@/components/preview-section"
 import { AuthorSection } from "@/components/author-section"
 import { ReviewsSection } from "@/components/reviews-section"
 import { BuySection } from "@/components/buy-section"
+import { EducatorSection } from "@/components/educator-section"
 import { NewsletterSection } from "@/components/newsletter-section"
 import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
@@ -19,6 +20,7 @@ export default function Home() {
       <AuthorSection />
       <ReviewsSection />
       <BuySection />
+      <EducatorSection />
       <NewsletterSection />
       <Footer />
       <FreeBookPopup />

@@ -41,6 +41,11 @@ export function Footer() {
                   Get Your Copy
                 </Link>
               </li>
+              <li>
+                <Link href="#educators" className="text-white/80 hover:text-white transition-colors">
+                  Schools &amp; Libraries
+                </Link>
+              </li>
             </ul>
           </div>
 

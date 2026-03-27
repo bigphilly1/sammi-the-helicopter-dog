@@ -9,24 +9,35 @@ const retailers = [
     url: "mailto:sammithehelicopterdog@gmail.com?subject=Signed%20Copy%20Order&body=Hi%20Phil%2C%20I%27d%20love%20to%20order%20a%20signed%20copy%20of%20Sammi%20The%20Helicopter%20Dog!",
     primary: true,
     highlight: true,
+    external: false,
   },
   {
     name: "Amazon Australia",
     url: "https://www.amazon.com.au/Sammi-Helicopter-Dog-First-Flight/dp/0645417122",
     primary: true,
     highlight: false,
+    external: true,
+  },
+  {
+    name: "Booktopia",
+    url: "https://www.booktopia.com.au/sammi-the-helicopter-dog/book/9780645417128.html",
+    primary: true,
+    highlight: false,
+    external: true,
   },
   {
     name: "Barnes & Noble",
     url: "https://www.barnesandnoble.com/w/sammi-the-helicopter-dog-my-first-flight-phil-carey/1141019033",
     primary: false,
     highlight: false,
+    external: true,
   },
   {
     name: "BookLoop",
     url: "https://www.bookloop.com.au/product/sammi-the-helicopter-dog-my-first-flight/",
     primary: false,
     highlight: false,
+    external: true,
   },
 ]
 
@@ -67,7 +78,7 @@ export function BuySection() {
                   <BookOpen className="w-6 h-6 text-primary" />
                   <span className="font-semibold text-foreground">Paperback</span>
                 </div>
-                <p className="text-3xl font-bold text-foreground mb-1">$23.48</p>
+                <p className="text-2xl font-bold text-foreground mb-1">Check price</p>
                 <p className="text-sm text-muted-foreground">32 pages, 21.59 x 21.59 cm</p>
               </div>
               <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-white/50">
@@ -75,7 +86,7 @@ export function BuySection() {
                   <Smartphone className="w-6 h-6 text-primary" />
                   <span className="font-semibold text-foreground">Kindle eBook</span>
                 </div>
-                <p className="text-3xl font-bold text-foreground mb-1">$11.11</p>
+                <p className="text-2xl font-bold text-foreground mb-1">Check price</p>
                 <p className="text-sm text-muted-foreground">Read instantly on any device</p>
               </div>
             </div>
@@ -96,7 +107,11 @@ export function BuySection() {
                       : ""
                   }`}
                 >
-                  <Link href={retailer.url} target={retailer.highlight ? "_self" : "_blank"} rel="noopener noreferrer">
+                  <Link
+                    href={retailer.url}
+                    target={retailer.external ? "_blank" : "_self"}
+                    rel={retailer.external ? "noopener noreferrer" : undefined}
+                  >
                     {retailer.highlight && <Star className="w-4 h-4 mr-2 fill-current" />}
                     {retailer.highlight ? retailer.name : `Buy on ${retailer.name}`}
                   </Link>
