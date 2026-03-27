@@ -5,10 +5,10 @@ import { BookOpen, Smartphone, Star } from "lucide-react"
 const retailers = [
   {
     name: "Buy directly from Sammi & get a signed copy!",
-    url: "mailto:sammithehelicopterdog@gmail.com?subject=Signed%20Copy%20Order&body=Hi%20Phil%2C%20I%27d%20love%20to%20order%20a%20signed%20copy%20of%20Sammi%20The%20Helicopter%20Dog!",
+    url: "https://mail.google.com/mail/?view=cm&to=sammithehelicopterdog@gmail.com&su=Signed%20Copy%20Order&body=Hi%20Phil%2C%20I%27d%20love%20to%20order%20a%20signed%20copy%20of%20Sammi%20The%20Helicopter%20Dog!",
     primary: true,
     highlight: true,
-    external: false,
+    external: true,
   },
   {
     name: "Amazon Australia",

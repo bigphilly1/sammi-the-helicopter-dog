@@ -74,7 +74,9 @@ export function EducatorSection() {
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
               <a
-                href="mailto:sammithehelicopterdog@gmail.com?subject=School%20Enquiry&body=Hi%20Phil%2C%20I%27d%20like%20to%20enquire%20about%20Sammi%20The%20Helicopter%20Dog%20for%20our%20school."
+                href="https://mail.google.com/mail/?view=cm&to=sammithehelicopterdog@gmail.com&su=School%20Enquiry&body=Hi%20Phil%2C%20I%27d%20like%20to%20enquire%20about%20Sammi%20The%20Helicopter%20Dog%20for%20our%20school."
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Get in Touch
