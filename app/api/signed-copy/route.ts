@@ -17,11 +17,12 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: true })
     }
 
+    // Store child's name in first_name so it's visible in Flodesk without
+    // needing a pre-created custom field. Format: "Child: Sophie" so Phil
+    // can see at a glance whose book to sign.
     const payload: Record<string, unknown> = {
       email: email.toLowerCase().trim(),
-      custom_fields: {
-        child_name: childName.trim(),
-      },
+      first_name: `Child: ${childName.trim()}`,
     }
 
     if (SEGMENT_ID) {
