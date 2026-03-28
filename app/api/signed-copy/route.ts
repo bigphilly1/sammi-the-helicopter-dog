@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server"
 
-// Create a segment in Flodesk called "Signed Copy Orders" and paste its ID here
-// in your Vercel environment variables as FLODESK_SIGNED_COPY_SEGMENT_ID
-const SEGMENT_ID = process.env.FLODESK_SIGNED_COPY_SEGMENT_ID
+// Flodesk segment ID for signed copy orders — set as FLODESK_SIGNED_COPY_ID in Vercel env vars
+const SEGMENT_ID = process.env.FLODESK_SIGNED_COPY_ID
 
 export async function POST(request: Request) {
   try {
